@@ -1,1 +1,5 @@
-# mds3_unitesting_2020
+# unit_test
+Unit test with Jest
+
+# How to execute test ?
+npm test
