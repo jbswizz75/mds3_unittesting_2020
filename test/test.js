@@ -37,14 +37,12 @@ describe('Checking Names', () => {
 
   test('User is Jeff', () => {
     const user = 'Jeff';
-    //Check if the user is Jeff
-    // Complete here
+    expect(user).toBe('Jeff');
   });
 
   test('User is Karen', () => {
     const user = 'Karen';
-    //Check if the user is Karen
-    // Complete here
+    expect(user).toBe('Karen');
   });
 });
 
@@ -72,12 +70,14 @@ test('Adds 2 + 2 to NOT equal 5', () => {
 // toBeFalsy matches anything that an if statement treats as false
 
 test('Should be null', () => {
-  // Complete here
+  const n = null;
+  expect(n).toBeNull();
 });
 
 // toBeFalsy
 test('Should be falsy', () => {
-  // Complete here
+  const n = null;
+  expect(n).toBeFalsy();
 });
 
 // toEqual
@@ -89,18 +89,19 @@ test('User should be Marc Antoine object', () => {
 test('Should be under or equal 1000', () => {
   const load1 = 500;
   const load2 = 500;
-  expect(sum(load1, load2)).toBe(4);
+  expect(sum(load1, load2)).toBeLessThanOrEqual(1000);
 });
 
 // Regex
 test('There is no I in the word team', () => {
-  // Complete here
+  expect('team').not.toMatch(/I/);
 });
 
 // Arrays
 test('Admin should be in usernames', () => {
   usernames = ['john', 'karen', 'admin'];
-  // Complete here
+  expect(usernames).toContain('Admin');
+  expect(new Set(usernames)).toContain('Admin');
 });
 
 // Working with async data
